@@ -12,6 +12,7 @@
 
 
 export class RecommendedWorksResponse {
+    'workName'?: string;
     'workId'?: number;
     'startTime'?: string;
     'endTime'?: string;
@@ -23,6 +24,12 @@ export class RecommendedWorksResponse {
     static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "workName",
+            "baseName": "workName",
+            "type": "string",
+            "format": ""
+        },
         {
             "name": "workId",
             "baseName": "workId",
