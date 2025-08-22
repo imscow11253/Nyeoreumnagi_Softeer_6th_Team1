@@ -13,6 +13,7 @@
 
 export class GetWeatherBriefingResponse {
     'hasWeatherRisk'?: boolean;
+    'welcomeMsg'?: string;
     'weatherMsg'?: string;
 
     static readonly discriminator: string | undefined = undefined;
@@ -24,6 +25,12 @@ export class GetWeatherBriefingResponse {
             "name": "hasWeatherRisk",
             "baseName": "hasWeatherRisk",
             "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "welcomeMsg",
+            "baseName": "welcomeMsg",
+            "type": "string",
             "format": ""
         },
         {
