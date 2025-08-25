@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
-import WorkCellsContainer from '../workCellsContainer/WorkCellsContainer';
-import WorkCardRegister from '../workCardRegister/WorkCardRegister';
-import useWorkBlocks from '@/pages/homePage/hooks/work/useWorkBlocks';
-import MainGraph from '../mainGraph/MainGraph';
-import GraphMenu from '../graphMenu/GraphMenu';
+import WorkCellsContainer from '../../desktop/components/workCellsContainer/WorkCellsContainer';
+import WorkCardRegister from '../../desktop/components/workCardRegister/WorkCardRegister';
+import useWorkBlocks from '@/pages/homePage/desktop/hooks/useWorkBlocks';
+import MainGraph from '../../desktop/components/mainGraph/MainGraph';
+import GraphMenu from '../../desktop/components/graphMenu/GraphMenu';
 import { WEATHER_METRICS, type WeatherMetrics } from '@/types/weather.types';
 import { WeatherRiskDto } from '@/types/openapiGenerator';
-import { generateYTicks } from '../../utils/lineChartUtil';
+import { generateYTicks } from '../../desktop/utils/lineChartUtil';
 import { getWeatherUnit } from '@/utils/getWeatherUnitUtil';
-import ChartS from '../mainLineChart/MainLineChart.style'; // TODO: 나중에 WorkContainer 스타일 정의 및 변경
-import useContainer from '@/pages/homePage/hooks/useContainer';
+import ChartS from '../../desktop/components/mainLineChart/MainLineChart.style'; // TODO: 나중에 WorkContainer 스타일 정의 및 변경
+import useContainer from '@/pages/homePage/desktop/hooks/useContainer';
 import S from './WorkContainer.style';
-import { useWeatherGraphQuery } from '../../hooks/useWeatherGraphQuery';
-import { useRecommendedWorks } from '../../hooks/work/useRecommendedWorks';
-import { useCreateWorkBlock } from '../../hooks/work/useCreateWorkBlock';
+import { useWeatherGraphQuery } from '../../desktop/hooks/useWeatherGraphQuery';
+import { useRecommendedWorks } from '../../desktop/hooks/useRecommendedWorks';
+import { useCreateWorkBlock } from '../../desktop/hooks/useCreateWorkBlock';
 import { useDragBlock } from '@/lib/dnd/hooks/useDragBlock';
 import DragContainer from '@/lib/dnd/components/DragContainer';
 import { useResizeBlock } from '@/lib/dnd/hooks/useResizeBlock';
@@ -22,7 +22,7 @@ import DraggingItem from '@/lib/dnd/components/DraggingItem';
 import { useTimeStore } from '@/store/useTimeStore';
 import { formatRelativeTime } from '@/utils/formatTimeUtil';
 import type { RecommendedWorksResponse } from '@/types/openapiGenerator';
-import RegisterWorkContainer from '../registerWorkContainer/RegisterWorkContainer';
+import RegisterWorkContainer from '../../desktop/components/registerWorkContainer/RegisterWorkContainer';
 
 const WorkContainer = ({
   weatherRiskData,
